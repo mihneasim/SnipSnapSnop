@@ -8,7 +8,9 @@ angular.module('snipApp').controller('SnipsController',
          $scope.snippet = {};
          $scope.snippets = sync.$asArray();
 
-         $scope.load = function () {
+         $scope.load = function (snipId) {
+             console.log("load", snipId);
+            $location.path("detail/" + snipId);
          }
 
          $scope.create = function() {

@@ -1,5 +1,6 @@
 angular.module('snipApp', [
-    'ngResource', 'ui.router', 'ui.bootstrap', 'angular-lodash', 'firebase'
+    'ngResource', 'ui.router', 'ui.bootstrap', 'angular-lodash', 'firebase',
+    'snipDirectives'
 ]).config(function ($stateProvider, $urlRouterProvider) {
   'use strict';
 

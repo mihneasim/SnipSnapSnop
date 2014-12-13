@@ -8,9 +8,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="snippet in snippets">
-            <td>{{ snippet.name }}</td>
-            <td>{{ snippet.description }}</td>
-        </tr>
+    <tr ng-repeat="snippet in snippets">
+        <td colspan="2">
+            <snippet-prev load="load(snippet.$id)" snippet="snippet"></snippet-prev>
+        </td>
+    </tr>
     </tbody>
 </table>
