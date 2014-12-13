@@ -8,7 +8,6 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script src="lib/angular/angular.min.js"></script>
-    <script src="lib/angular-resource/angular-resource.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
@@ -24,6 +23,7 @@
     <script src="modules/controllers/menu.js"></script>
     <script src="modules/controllers/snips.js"></script>
     <script src="modules/directives/snippet-prev.js"></script>
+    <script src="modules/filters.js"></script>
   </head>
   <body>
 
@@ -36,7 +36,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="home">Project name</a>
+          <a class="navbar-brand" ui-sref="home">SnipSnapSnop</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -49,6 +49,7 @@
     </nav>
 
     <div class="container" ui-view>
+    </div>
 
 
   </body>

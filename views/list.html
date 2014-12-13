@@ -1,17 +1,21 @@
-<h1>All snippets</h1>
+<div class="row row-centered">
+    <div class="col-md-10 col-centered">
+        <h1>All snippets</h1>
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description - preview</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="snippet in snippets">
-        <td colspan="2">
-            <snippet-prev load="load(snippet.$id)" snippet="snippet"></snippet-prev>
-        </td>
-    </tr>
-    </tbody>
-</table>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description - preview</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="snippet in snippets">
+                <td colspan="2">
+                    <snippet-prev load="load(snippet.$id)" snippet="snippet"></snippet-prev>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
