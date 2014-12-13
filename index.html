@@ -21,11 +21,12 @@
     <script src="lib/angularfire/dist/angularfire.min.js"></script>
 
     <script src="modules/app.js"></script>
+    <script src="modules/menu_controller.js"></script>
     <script src="modules/snips_controller.js"></script>
   </head>
   <body>
 
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" ng-controller="MenuController">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,9 +39,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a ui-sref="home">Home</a></li>
-            <li><a ui-sref="list">List Snippets</a></li>
-            <li><a ui-sref="create">Create Snippet</a></li>
+            <li ng-class="{active: state.current.name === 'home'}"><a ui-sref="home">Home</a></li>
+            <li ng-class="{active: state.current.name === 'list'}"><a ui-sref="list">List Snippets</a></li>
+            <li ng-class="{active: state.current.name === 'create'}"><a ui-sref="create">Create Snippet</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
