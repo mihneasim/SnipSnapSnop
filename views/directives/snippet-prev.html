@@ -1,5 +1,7 @@
-<div class="snip-preview" ng-click="load()">
-        <h3>{{ snippet.name }}</h3>
-        <h4>by {{ snippet.author }}</h4>
-        <div>{{ snippet.description | slugify }}</div>
+<div class="snip-preview row" ng-click="load()">
+        <div class="col-md-4">
+                <h3>{{ snippet.name }}</h3>
+                <h4>by {{ snippet.author }}</h4>
+        </div>
+        <div class="col-md8">{{ snippet.description | slugify }}</div>
 </div>
