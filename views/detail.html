@@ -1,10 +1,10 @@
-      <div class="row">
+      <div class="row" ng-init="loadDetail()">
 
          <div class="col-sm-8 blog-main">
            <div class="blog-post">
-               <h2 class="blog-post-title">{{ description }}</h2>
+               <h2 class="blog-post-title">{{ viewSnippet.description }}</h2>
 
-               <pre>{{ code }}</pre>
+               <pre>{{ viewSnippet.code }}</pre>
 
            </div>
          </div>
@@ -12,8 +12,8 @@
          <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
            <div class="sidebar-module sidebar-module-inset">
              <h4>About</h4>
-             <p>{{ description }}</p>
-             <p>Created by {{ author }}</p>
+             <p>{{ viewSnippet.description }}</p>
+             <p>Created by {{ viewSnippet.author }}</p>
            </div>
          </div>
 

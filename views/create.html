@@ -1,28 +1,28 @@
 <div class="row row-centered">
     <div class="col-md-6 col-centered">
-        <form role="form">
+        <form role="form"  ng-submit="create()">
             <h2>Create a new snippet</h2>
             <div class="form-group">
                 <label for="inputName" class="sr-only">Name</label>
                 <input type="text" id="inputName" class="form-control"
-                    placeholder="Short Name" required ng-model="name" />
+                    placeholder="Short Name" required ng-model="snippet.name" />
             </div>
 
             <div class="form-group">
                 <label for="inputSnippet" class="sr-only">Snippet Code</label>
-                <textarea id="inputSnippet" class="form-control" ng-model="code"></textarea>
+                <textarea id="inputSnippet" class="form-control" ng-model="snippet.code"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="inputDescription" class="sr-only">Description</label>
                 <input type="text" id="inputDescription" class="form-control"
-                    placeholder="Short Description" required ng-model="description" />
+                    placeholder="Short Description" required ng-model="snippet.description" />
             </div>
 
             <div class="form-group">
                 <label for="inputAuthor" class="sr-only">Author</label>
                 <input type="author" id="inputAuthor" class="form-control"
-                    placeholder="Author of snippet" required autofocus ng-model="author" />
+                    placeholder="Author of snippet" required autofocus ng-model="snippet.author" />
             </div>
 
             <div class="form-group">

@@ -1,5 +1,5 @@
 angular.module('snipApp', [
-    'ngResource', 'ui.router', 'ui.bootstrap', 'angular-lodash'
+    'ngResource', 'ui.router', 'ui.bootstrap', 'angular-lodash', 'firebase'
 ]).config(function ($stateProvider, $urlRouterProvider) {
   'use strict';
 
@@ -13,22 +13,17 @@ angular.module('snipApp', [
   .state('list', {
     url: '/list',
     templateUrl: 'views/list.html',
-    controller: function($scope) {
-      $scope.snippets = [{'id': '1', 'name': '1', 'description': 'some desc', 'code': 'echo "hello"', 'author': 'John Doe'}];
-    }
+    controller: 'SnipsController'
   })
   .state('create', {
     url: '/create',
     templateUrl: 'views/create.html',
-    controller: function($scope) {
-    }
+    controller: 'SnipsController'
   })
   .state('detail', {
-    url: '/detail/{snippetId:[0-9]+}',
+    url: '/detail/{snippetId:.+}',
     templateUrl: 'views/detail.html',
-    controller: function($scope) {
-      $scope.snippet = {'name': '1', 'description': 'some desc', 'code': 'echo "hello"', 'author': 'John Doe'};
-    }
+    controller: 'SnipsController'
   })
 
   .state('404', {
