@@ -1,7 +1,7 @@
 angular.module('snipApp', [
     'ui.router', 'ui.bootstrap', 'angular-lodash', 'firebase',
     'snipDirectives', 'snipFilters'
-]).config(function ($stateProvider, $urlRouterProvider) {
+]).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   'use strict';
 
   $urlRouterProvider.otherwise('/404');
@@ -30,6 +30,8 @@ angular.module('snipApp', [
   .state('404', {
     url: '/404',
     templateUrl: 'views/404.html'
-  })
+  });
+
+  $locationProvider.html5Mode(true);
 
 });
